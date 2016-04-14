@@ -2,7 +2,7 @@
 
 class Hash
 
-  #The full_dup method for structs.
+  #The full_dup method for hashes.
   def full_dup(progress={})
     progress[object_id] = result = dup
     exclude = full_dup_exclude
