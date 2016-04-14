@@ -2,16 +2,16 @@
 
 class Hash
 
-  #The full_clone method for structs.
-  def full_clone(progress={})
-    progress[object_id] = result = clone
-    exclude = full_clone_exclude
+  #The full_dup method for structs.
+  def full_dup(progress={})
+    progress[object_id] = result = dup
+    exclude = full_dup_exclude
 
     each_key do |name|
 
       unless exclude.include?(name)
         value = result[name]
-        value = progress[value.object_id] || value.full_clone(progress)
+        value = progress[value.object_id] || value.full_dup(progress)
         result[name] = value
       end
 

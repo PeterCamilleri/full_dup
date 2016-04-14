@@ -34,7 +34,7 @@ class ArrayFullDupTester < Minitest::Test
     simple1.define_singleton_method(:full_dup_exclude) {[0]}
     assert_equal(simple1.singleton_methods, [:full_dup_exclude])
     simple2 = simple1.full_dup
-    assert_equal(simple2.singleton_methods, [:full_dup_exclude])
+    assert_equal(simple2.singleton_methods, [])
 
     assert_equal(simple1[0], simple2[0])
     assert_equal(simple1[1], 5)
@@ -57,7 +57,7 @@ class ArrayFullDupTester < Minitest::Test
     assert_equal(simple1.singleton_methods, [:full_dup_exclude])
     simple1[2] = simple1
     simple2 = simple1.full_dup
-    assert_equal(simple2.singleton_methods, [:full_dup_exclude])
+    assert_equal(simple2.singleton_methods, [])
 
     refute_equal(simple2.object_id, simple2[2].object_id)
     assert_equal(simple1.object_id, simple2[2].object_id)
