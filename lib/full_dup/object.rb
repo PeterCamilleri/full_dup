@@ -1,3 +1,5 @@
+# coding: utf-8
+
 class Object
 
   #By default, no instance variables are excluded.

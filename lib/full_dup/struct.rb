@@ -1,3 +1,5 @@
+# coding: utf-8
+
 class Struct
 
   #The full_clone method for structs.

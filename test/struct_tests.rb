@@ -1,12 +1,12 @@
 # coding: utf-8
 
-require_relative '../lib/full_clone'
+require_relative '../lib/full_dup'
 gem              'minitest'
 require          'minitest/autorun'
 require          'minitest_visible'
 
 #Test the monkey patches applied to the Object class.
-class StructFullCloneTester < Minitest::Test
+class StructFullDupTester < Minitest::Test
 
   SimpleStruct = Struct.new(:iva, :ivb, :ivc)
 

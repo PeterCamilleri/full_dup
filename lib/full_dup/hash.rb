@@ -1,3 +1,5 @@
+# coding: utf-8
+
 class Hash
 
   #The full_clone method for structs.
