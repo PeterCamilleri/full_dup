@@ -14,6 +14,11 @@ Rake::TestTask.new do |t|
   t.warning = true
 end
 
+desc "Fire up an IRB session with full_dup preloaded."
+task :console do
+  system "ruby irbt.rb local"
+end
+
 desc "What version of full_dup is this?"
 task :vers do |t|
   puts
