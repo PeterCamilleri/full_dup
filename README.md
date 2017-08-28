@@ -94,11 +94,11 @@ array:
 ```ruby
 my_array.define_singleton_method(:full_dup_exclude) { [0, 1] }
 ```
-<br>**Possible Red Flag** There is a catch here. The dup method does _not_
-duplicate singleton methods (unlike the clone method). Thus any duplicates
-made in this manner will lose the attached full_dup_exclude method. If it is
-important to retain singleton methods, consider using the full_clone gem
-instead.
+<br>**Possible Red Flag** There is a catch here. The dup and full_dup methods
+do not duplicate singleton methods (unlike the clone and full_clone methods).
+Thus any duplicates made in this manner will lose the attached full_dup_exclude
+method. If it is important to retain singleton methods, consider using the
+full_clone gem instead.
 
 ## Notes
 
