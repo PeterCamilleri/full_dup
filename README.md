@@ -13,8 +13,9 @@ it does mean that the dup operation must be applied with great care.
 
 Unlike the standard dup method, the full\_dup method does not throw an
 exception when it sees un-duppable value objects like 42 or true. These values
-simply return themselves. This is correct because those types of objects do
-not _need_ to be duped. Instead of having a fit, the code just works!
+simply return themselves. This is deemed correct because those types of objects
+are immutable and do not need to be duped. Instead of raising an exception,
+the code returns the immutable object instead.
 
 Another issue that this gem deals with is that of data with looping reference
 chains. To handle this, the code tracks object ID values and does not re-dup
