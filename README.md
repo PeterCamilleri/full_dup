@@ -20,7 +20,11 @@ the code returns the immutable object instead.
 Another issue that this gem deals with is that of data with looping reference
 chains. To handle this, the code tracks object ID values and does not re-dup
 data that has already been duped. Thus even nasty edge cases are handled
-without any special effort on the part of the application programmer.
+without any special effort on the part of the application programmer. Note though
+that this also means that it is important that the object id be correctly
+implemented. Fortunately, this is done by default in Ruby. If you implement your
+own object id for your own special classes, (1) Don't! (2) It's all on you to 
+do as good a job as Ruby does and (3) Really DON'T!
 
 ## Family Overview
 
