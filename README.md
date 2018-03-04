@@ -24,7 +24,8 @@ without any special effort on the part of the application programmer. Note thoug
 that this also means that it is important that the object id be correctly
 implemented. Fortunately, this is done by default in Ruby. If you implement your
 own object id for your own special classes, (1) Don't! (2) It's all on you to 
-do as good a job as Ruby does and (3) Really DON'T!
+do as good a job as Ruby does and (3) Really DON'T! If object_id is broken, 
+then full_dup will also be broken!
 
 ## Family Overview
 
@@ -103,15 +104,6 @@ do not duplicate singleton methods (unlike the clone and full_clone methods).
 Thus any duplicates made in this manner will lose the attached full_dup_exclude
 method. If it is important to retain singleton methods, consider using the
 full_clone gem instead.
-
-## Notes
-
-The full_dup gem tracks its progress and handles data objects that
-contain loops, cycles, and other forms of recursion. In order to do this,
-it relies heavily on the object_id property of the data being copied.
-If object_id is broken, then full_dup and hashes and ... will also be
-broken!
-
 
 ## Contributing
 
