@@ -1,5 +1,10 @@
 # FullDup
 
+The full_dup gem adds the full_dup method to all objects descended from the
+Object class. While this gem makes extensive use of monkey patching, it does
+not modify the behaviour of any existing methods. This is done to minimize
+the risk of breaking any existing code.
+
 The standard dup method creates a fresh instance of most (non-scalar) objects
 but does not process internal state. This internal state remains aliased in the
 duplicated copy. The full_dup method digs deep and makes copies of these
@@ -22,10 +27,13 @@ chains. To handle this, the code tracks object ID values and does not re-dup
 data that has already been duped. Thus even nasty edge cases are handled
 without any special effort on the part of the application programmer. Note though
 that this also means that it is important that the object id be correctly
-implemented. Fortunately, this is done by default in Ruby. If you implement your
-own object id for your own special classes, (1) Don't! (2) It's all on you to 
-do as good a job as Ruby does and (3) Really DON'T! If object_id is broken, 
-then full_dup will also be broken!
+implemented. Fortunately, this is done by default in Ruby. 
+
+If you wish to implement your own object id for your own special classes:
+1. Don't! 
+2. It's all on you to do as good a job as Ruby.
+3. Really DON'T! If object_id is broken, 
+then full_dup (and a whole lot of other things too) will also be broken!
 
 ## Family Overview
 
