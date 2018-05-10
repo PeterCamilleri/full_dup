@@ -30,10 +30,12 @@ that this also means that it is important that the object id be correctly
 implemented. Fortunately, this is done by default in Ruby. 
 
 If you wish to implement your own object id for your own special classes:
-1. Don't! 
-2. It's all on you to do as good a job as Ruby.
-3. Really DON'T! If object_id is broken, 
+1. Don't! If object_id is broken, 
 then full_dup (and a whole lot of other things too) will also be broken!
+2. It's all on you to do as good a job as Ruby. Like the Ruby object id method,
+your method must create id values must be unique to each object and are perfectly 
+repeatable for that object.
+3. Really DON'T! I have never found a valid reason for doing so. I doubt that one exists.
 
 ## Family Overview
 
