@@ -27,13 +27,13 @@ chains. To handle this, the code tracks object ID values and does not re-dup
 data that has already been duped. Thus even nasty edge cases are handled
 without any special effort on the part of the application programmer. Note though
 that this also means that it is important that the object id be correctly
-implemented. Fortunately, this is done by default in Ruby. 
+implemented. Fortunately, this is done by default in Ruby.
 
 If you wish to implement your own object id for your own special classes:
-1. Don't! If object_id is broken, 
+1. Don't! If object_id is broken,
 then full_dup (and a whole lot of other things too) will also be broken!
 2. It's all on you to do as good a job as Ruby. Like the Ruby object id method,
-your method must create id values that are unique to each object and are perfectly 
+your method must create id values that are unique to each object and are perfectly
 repeatable for that object.
 3. Really DON'T! I have never found a valid reason for doing so. I doubt that one exists.
 
@@ -114,6 +114,41 @@ do not duplicate singleton methods (unlike the clone and full_clone methods).
 Thus any duplicates made in this manner will lose the attached full_dup_exclude
 method. If it is important to retain singleton methods, consider using the
 full_clone gem instead.
+
+### irbt
+
+The root folder of the full_dup gem contains the file irbt.rb. This program
+opens up the irb repl with the full_dup gem preloaded and is useful for trying
+out the gem interactively.
+
+By default, irbt will load the system gem version of full dup. The following
+interactive session demonstrates the difference between dup and full_dup
+
+```
+C:\Sites\full_dup>ruby irbt.rb
+Starting an IRB console with full_dup loaded.
+full_dup loaded from gem: 0.0.5
+irb(main):001:0> a = ["a", "b", "c"]
+=> ["a", "b", "c"]
+irb(main):002:0> b = a.dup
+=> ["a", "b", "c"]
+irb(main):003:0> c = a.full_dup
+=> ["a", "b", "c"]
+irb(main):004:0> a[0] << "foo"
+=> "afoo"
+irb(main):005:0> a
+=> ["afoo", "b", "c"]
+irb(main):006:0> b
+=> ["afoo", "b", "c"]
+irb(main):007:0> c
+=> ["a", "b", "c"]
+irb(main):008:0>
+```
+To load the local copy of full_dup use:
+```
+>ruby irbt.rb local #optional irb args go here.
+#etc etc etc...
+```
 
 ## Contributing
 
