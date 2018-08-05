@@ -5,6 +5,8 @@ Object class. While this gem makes extensive use of monkey patching, it does
 not modify the behaviour of any existing methods. This is done to minimize
 the risk of breaking any existing code.
 
+New for version 0.0.6, now 84% faster (at least in my tests).
+
 The standard dup method creates a fresh instance of most (non-scalar) objects
 but does not process internal state. This internal state remains aliased in the
 duplicated copy. The full_dup method digs deep and makes copies of these

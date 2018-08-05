@@ -18,7 +18,7 @@ class ArrayFullDupTester < Minitest::Test
 
     assert_equal(simple1[0], simple2[0])
     assert_equal(simple1[1], 5)
-    assert_equal(simple1[2], nil)
+    assert_nil(simple1[2], nil)
     refute_equal(simple1[0].object_id, simple2[0].object_id)
 
     sa << "West"
@@ -38,7 +38,7 @@ class ArrayFullDupTester < Minitest::Test
 
     assert_equal(simple1[0], simple2[0])
     assert_equal(simple1[1], 5)
-    assert_equal(simple1[2], nil)
+    assert_nil(simple1[2], nil)
     assert_equal(simple1[0].object_id, simple2[0].object_id)
   end
 
