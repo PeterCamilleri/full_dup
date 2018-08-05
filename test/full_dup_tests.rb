@@ -24,7 +24,7 @@ class FullDupTester < Minitest::Test
     assert_equal((false).full_dup, false)
     assert_equal((false).full_dup.object_id, (false).object_id)
 
-    assert_equal((nil).full_dup, nil)
+    assert_nil((nil).full_dup, nil)
     assert_equal((nil).full_dup.object_id, (nil).object_id)
 
     rex = /ABC/

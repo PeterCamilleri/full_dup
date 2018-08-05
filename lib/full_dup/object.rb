@@ -12,14 +12,20 @@ class Object
     progress[object_id] = result = dup
     exclude = full_dup_exclude
 
-    instance_variables.each do |name|
-
-      unless exclude.include?(name)
+    if exclude.empty?
+      instance_variables.each do |name|
         value = result.instance_variable_get(name)
         value = progress[value.object_id] || value.full_dup(progress)
         result.instance_variable_set(name, value)
       end
-
+    else
+      instance_variables.each do |name|
+        unless exclude.include?(name)
+          value = result.instance_variable_get(name)
+          value = progress[value.object_id] || value.full_dup(progress)
+          result.instance_variable_set(name, value)
+        end
+      end
     end
 
     result

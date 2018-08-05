@@ -28,7 +28,7 @@ class ObjectFullDupTester < Minitest::Test
 
     assert_equal(simple1.iva, simple2.iva)
     assert_equal(simple1.ivb, 5)
-    assert_equal(simple1.ivc, nil)
+    assert_nil(simple1.ivc, nil)
     refute_equal(simple1.iva.object_id, simple2.iva.object_id)
 
     sa << "West"
@@ -48,7 +48,7 @@ class ObjectFullDupTester < Minitest::Test
 
     assert_equal(simple1.iva, simple2.iva)
     assert_equal(simple1.ivb, 5)
-    assert_equal(simple1.ivc, nil)
+    assert_nil(simple1.ivc, nil)
     assert_equal(simple1.iva.object_id, simple2.iva.object_id)
   end
 
