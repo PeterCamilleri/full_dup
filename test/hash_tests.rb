@@ -18,7 +18,7 @@ class HashFullDupTester < Minitest::Test
 
     assert_equal(simple1[:iva], simple2[:iva])
     assert_equal(simple1[:ivb], 5)
-    assert_nil(simple1[:ivc], nil)
+    assert_nil(simple1[:ivc])
     refute_equal(simple1[:iva].object_id, simple2[:iva].object_id)
 
     sa << "West"
@@ -38,7 +38,7 @@ class HashFullDupTester < Minitest::Test
 
     assert_equal(simple1[:iva], simple2[:iva])
     assert_equal(simple1[:ivb], 5)
-    assert_nil(simple1[:ivc], nil)
+    assert_nil(simple1[:ivc])
     assert_equal(simple1[:iva].object_id, simple2[:iva].object_id)
   end
 
