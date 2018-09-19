@@ -37,13 +37,4 @@ lib/full_dup/use_dup.rb -- 4 warnings:
   [3]:IrresponsibleModule: FullDupDup has no descriptive comment [https://github.com/troessner/reek/blob/v5.0.2/docs/Irresponsible-Module.md]
   [17]:IrresponsibleModule: MatchData has no descriptive comment [https://github.com/troessner/reek/blob/v5.0.2/docs/Irresponsible-Module.md]
   [9]:IrresponsibleModule: String has no descriptive comment [https://github.com/troessner/reek/blob/v5.0.2/docs/Irresponsible-Module.md]
-lib/full_dup/use_self.rb -- 8 warnings:
-  [21]:IrresponsibleModule: FalseClass has no descriptive comment [https://github.com/troessner/reek/blob/v5.0.2/docs/Irresponsible-Module.md]
-  [3]:IrresponsibleModule: FullDupSelf has no descriptive comment [https://github.com/troessner/reek/blob/v5.0.2/docs/Irresponsible-Module.md]
-  [13]:IrresponsibleModule: NilClass has no descriptive comment [https://github.com/troessner/reek/blob/v5.0.2/docs/Irresponsible-Module.md]
-  [9]:IrresponsibleModule: Numeric has no descriptive comment [https://github.com/troessner/reek/blob/v5.0.2/docs/Irresponsible-Module.md]
-  [29]:IrresponsibleModule: Regexp has no descriptive comment [https://github.com/troessner/reek/blob/v5.0.2/docs/Irresponsible-Module.md]
-  [25]:IrresponsibleModule: Symbol has no descriptive comment [https://github.com/troessner/reek/blob/v5.0.2/docs/Irresponsible-Module.md]
-  [33]:IrresponsibleModule: Thread has no descriptive comment [https://github.com/troessner/reek/blob/v5.0.2/docs/Irresponsible-Module.md]
-  [17]:IrresponsibleModule: TrueClass has no descriptive comment [https://github.com/troessner/reek/blob/v5.0.2/docs/Irresponsible-Module.md]
-42 total warnings
+34 total warnings
