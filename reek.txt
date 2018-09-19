@@ -23,13 +23,4 @@ lib/full_dup/object.rb -- 8 warnings:
   [18, 25]:DuplicateMethodCall: Object#full_dup calls 'value.object_id' 2 times [https://github.com/troessner/reek/blob/v5.0.2/docs/Duplicate-Method-Call.md]
   [3]:IrresponsibleModule: Object has no descriptive comment [https://github.com/troessner/reek/blob/v5.0.2/docs/Irresponsible-Module.md]
   [11]:TooManyStatements: Object#full_dup has approx 11 statements [https://github.com/troessner/reek/blob/v5.0.2/docs/Too-Many-Statements.md]
-lib/full_dup/struct.rb -- 8 warnings:
-  [11, 17]:DuplicateMethodCall: Struct#full_dup calls 'members.each' 2 times [https://github.com/troessner/reek/blob/v5.0.2/docs/Duplicate-Method-Call.md]
-  [13, 20]:DuplicateMethodCall: Struct#full_dup calls 'progress[value.object_id]' 2 times [https://github.com/troessner/reek/blob/v5.0.2/docs/Duplicate-Method-Call.md]
-  [14, 21]:DuplicateMethodCall: Struct#full_dup calls 'result[name] = value' 2 times [https://github.com/troessner/reek/blob/v5.0.2/docs/Duplicate-Method-Call.md]
-  [12, 19]:DuplicateMethodCall: Struct#full_dup calls 'result[name]' 2 times [https://github.com/troessner/reek/blob/v5.0.2/docs/Duplicate-Method-Call.md]
-  [13, 20]:DuplicateMethodCall: Struct#full_dup calls 'value.full_dup(progress)' 2 times [https://github.com/troessner/reek/blob/v5.0.2/docs/Duplicate-Method-Call.md]
-  [13, 20]:DuplicateMethodCall: Struct#full_dup calls 'value.object_id' 2 times [https://github.com/troessner/reek/blob/v5.0.2/docs/Duplicate-Method-Call.md]
-  [3]:IrresponsibleModule: Struct has no descriptive comment [https://github.com/troessner/reek/blob/v5.0.2/docs/Irresponsible-Module.md]
-  [6]:TooManyStatements: Struct#full_dup has approx 11 statements [https://github.com/troessner/reek/blob/v5.0.2/docs/Too-Many-Statements.md]
-30 total warnings
+22 total warnings
