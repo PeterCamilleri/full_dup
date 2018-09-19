@@ -32,9 +32,4 @@ lib/full_dup/struct.rb -- 8 warnings:
   [13, 20]:DuplicateMethodCall: Struct#full_dup calls 'value.object_id' 2 times [https://github.com/troessner/reek/blob/v5.0.2/docs/Duplicate-Method-Call.md]
   [3]:IrresponsibleModule: Struct has no descriptive comment [https://github.com/troessner/reek/blob/v5.0.2/docs/Irresponsible-Module.md]
   [6]:TooManyStatements: Struct#full_dup has approx 11 statements [https://github.com/troessner/reek/blob/v5.0.2/docs/Too-Many-Statements.md]
-lib/full_dup/use_dup.rb -- 4 warnings:
-  [13]:IrresponsibleModule: Enumerator has no descriptive comment [https://github.com/troessner/reek/blob/v5.0.2/docs/Irresponsible-Module.md]
-  [3]:IrresponsibleModule: FullDupDup has no descriptive comment [https://github.com/troessner/reek/blob/v5.0.2/docs/Irresponsible-Module.md]
-  [17]:IrresponsibleModule: MatchData has no descriptive comment [https://github.com/troessner/reek/blob/v5.0.2/docs/Irresponsible-Module.md]
-  [9]:IrresponsibleModule: String has no descriptive comment [https://github.com/troessner/reek/blob/v5.0.2/docs/Irresponsible-Module.md]
-34 total warnings
+30 total warnings
