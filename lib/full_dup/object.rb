@@ -2,24 +2,11 @@
 
 # Add full_dup support to the object class.
 class Object
+  include FullDup
 
   #By default, no instance variables are excluded.
   def full_dup_exclude
     []
-  end
-
-  #The full_dup method for most objects.
-  def full_dup(progress={})
-    progress[object_id] = result = dup
-    exclude = full_dup_exclude
-
-    if exclude.empty?
-      result.full_dup_no_exclusions(progress)
-    else
-      result.full_dup_with_exclusions(progress, exclude)
-    end
-
-    result
   end
 
   # Do a full_dup with no exclusions
