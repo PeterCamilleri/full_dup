@@ -2,7 +2,6 @@
 
 # Add full_dup support to the struct class.
 class Struct
-  include FullDup
 
   # Do a full_dup with no exclusions
   def full_dup_no_exclusions(progress)
