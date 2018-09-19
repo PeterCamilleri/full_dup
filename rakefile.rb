@@ -14,6 +14,11 @@ Rake::TestTask.new do |t|
   t.warning = true
 end
 
+desc "Run a scan for smelly code!"
+task :reek do |t|
+  `reek --no-color lib > reek.txt`
+end
+
 desc "Fire up an IRB session with full_dup preloaded."
 task :console do
   system "ruby irbt.rb local"
