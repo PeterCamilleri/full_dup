@@ -166,3 +166,14 @@ To load the local copy of full_dup use:
 
 Go to the GitHub repository and raise an issue calling attention to some
 aspect that could use some TLC or a suggestion or an idea.
+
+## License
+
+The gem is available as open source under the terms of the
+[MIT License](./LICENSE.txt).
+
+## Code of Conduct
+
+Everyone interacting in the fully_freeze project’s codebases, issue trackers,
+chat rooms and mailing lists is expected to follow the
+[code of conduct](./CODE_OF_CONDUCT.md).
