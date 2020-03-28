@@ -3,13 +3,9 @@
 require_relative '../lib/full_dup'
 gem              'minitest'
 require          'minitest/autorun'
-require          'minitest_visible'
 
 #Test the monkey patches applied to the Object class.
 class ArrayFullDupTester < Minitest::Test
-
-  #Track mini-test progress.
-  include MinitestVisible
 
   def test_basic_deep_duping
     sa = "North"

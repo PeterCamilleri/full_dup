@@ -3,15 +3,11 @@
 require_relative '../lib/full_dup'
 gem              'minitest'
 require          'minitest/autorun'
-require          'minitest_visible'
 
 #Test the monkey patches applied to the Object class.
 class StructFullDupTester < Minitest::Test
 
   SimpleStruct = Struct.new(:iva, :ivb, :ivc)
-
-  #Track mini-test progress.
-  include MinitestVisible
 
   def test_basic_full_dupping
     sa = "North"
